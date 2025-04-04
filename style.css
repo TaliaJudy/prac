@@ -1,4 +1,7 @@
+<style>
+
 #flickering-image {
+  
   animation: flicker 1s infinite; /* Adjust duration and count as needed */
 }
 
@@ -7,3 +10,4 @@
   50% { opacity: 0.2; } /* Image is almost invisible */
   100% { opacity: 1; } /* Image is fully visible again */
 }
+</style>
