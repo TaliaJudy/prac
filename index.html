@@ -1,13 +1,100 @@
-<html>
-  
-  <body>
-  
-    <audio autoplay controls height="100px" width="100px">
-      <source src="luther.m4a">
-    </audio>
-    <hr>
-    <video controls height="800px" width="800px">
-      <source src="VID-20250404-WA0047.mp4">
-        </video>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>💖 Ultimate Media Player 💖</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  body {
+    background: radial-gradient(circle at center, #ffcee1, #ff89b1, #ff4682);
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    padding: 2rem;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: backgroundPulse 8s ease-in-out infinite;
+  }
+  @keyframes backgroundPulse {
+    0%,100% { background-size: 100% 100%; }
+    50% { background-size: 110% 110%; }
+  }
+
+  h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+    text-shadow: 0 0 15px #ff89b1;
+    margin-bottom: 2rem;
+    animation: glowText 2s ease-in-out infinite alternate;
+  }
+  @keyframes glowText {
+    from { text-shadow: 0 0 10px #ff89b1, 0 0 20px #ff89b1; }
+    to { text-shadow: 0 0 30px #ff4682, 0 0 50px #ff4682; }
+  }
+
+  audio, video {
+    border: 4px solid #fff;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.5), 0 0 40px rgba(255,137,177,0.7);
+    width: 100%;
+    max-width: 800px;
+    background: rgba(0,0,0,0.2);
+    margin: 1rem auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  audio:hover, video:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 40px #fff, 0 0 60px #ff4682;
+  }
+
+  footer {
+    margin-top: 2rem;
+    font-size: 1rem;
+    opacity: 0.7;
+    text-shadow: 0 0 8px #ff89b1;
+    animation: fadeIn 2s ease-in forwards;
+  }
+  @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+
+  .sparkle {
+    position: absolute;
+    width: 8px; height: 8px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+    animation: sparkle 2s ease-in-out infinite;
+  }
+  @keyframes sparkle {
+    0%,100% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1.5); }
+  }
+</style>
+</head>
+<body>
+
+  <h1>💖 My Ultimate Media Player 💖</h1>
+
+  <!-- Audio -->
+  <audio autoplay controls>
+    <source src="luther.m4a" type="audio/mp4" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Video -->
+  <video controls>
+    <source src="VID-20250404-WA0047.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <footer>&copy; 2025 Cytra — Designed with ✨ magic ✨</footer>
+
+  <!-- Sparkles -->
+  <div class="sparkle" style="top:10%; left:20%; animation-delay:0s;"></div>
+  <div class="sparkle" style="top:50%; left:70%; animation-delay:0.5s;"></div>
+  <div class="sparkle" style="top:80%; left:40%; animation-delay:1s;"></div>
+  <div class="sparkle" style="top:30%; left:80%; animation-delay:1.5s;"></div>
+
+</body>
 </html>
